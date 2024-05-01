@@ -22,7 +22,6 @@ class QWidget;
 namespace model::figures
 {
 class AbstractFigure;
-struct FigureType;
 }
 
 namespace model::paint
@@ -47,8 +46,6 @@ namespace view_model::paint_view
         void setType(model::figures::FigureType);
 
         bool currentObjectIsValid();
-
-        void mousePressEvent(QMouseEvent*);
 
         void drawFigures(QGraphicsScene*);
         void createDrawableObject(view::PaintView*,

@@ -8,7 +8,7 @@ class QPointF;
 namespace model::figures
 {
     class AbstractFigure;
-    class FigureType;
+    struct FigureType;
 
     class FigureFactory
     {

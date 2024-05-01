@@ -13,8 +13,6 @@ namespace model::figures
         Ellipse();
         Ellipse(const QPointF& centerPoint, float width, float height);
         Ellipse(const Rectangle&);
-    private:
-        QPointF pointCenter;
     };
 }
 

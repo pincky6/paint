@@ -28,7 +28,6 @@ PaintView::PaintView(QWidget *parent):
 
 void PaintView::mousePressEvent(QMouseEvent *event)
 {
-    qDebug() << "PRESS";
     if(event->button() == Qt::RightButton && logic.currentObjectIsValid())
     {
         logic.cancelCurrentObject(this, scene);
@@ -54,7 +53,6 @@ void PaintView::mousePressEvent(QMouseEvent *event)
 
 void PaintView::mouseMoveEvent(QMouseEvent *event)
 {
-    qDebug() << "MOVE";
     switch(state)
     {
     case PaintState::DRAW:
@@ -71,7 +69,6 @@ void PaintView::mouseMoveEvent(QMouseEvent *event)
 
 void PaintView::mouseReleaseEvent(QMouseEvent *event)
 {
-    Q_UNUSED(event)
     switch(state)
     {
     case PaintState::DRAW:

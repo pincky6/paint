@@ -37,11 +37,6 @@ bool PaintViewLogic::currentObjectIsValid()
     return (bool)currentObject;
 }
 
-void PaintViewLogic::mousePressEvent(QMouseEvent* event)
-{
-
-}
-
 void PaintViewLogic::drawFigures(QGraphicsScene* scene)
 {
     if(scene == nullptr)
@@ -236,7 +231,7 @@ void PaintViewLogic::serialize(QDataStream& stream)
 {
     foreach (const DrawableFigurePtr& figure, figures) {
         stream << FigureType::toStringRepresentation(figure->getType());
-        stream << figure->getFigure()->getVertices();
+        stream << *figure->getFigure();
     }
     foreach (const DrawableFigurePtr& pathDrawable, paths) {
        const Path* path = dynamic_cast<const Path*>(pathDrawable->getFigure().get());
@@ -262,7 +257,7 @@ void PaintViewLogic::deserialize(QDataStream& stream)
                                                     figureType));
         if(figureType != FigureType::PATH)
         {
-            stream >> figure->getFigure()->getVertices();
+            stream >> *figure->getFigure();
             figures.push_back(figure);
         }
         else

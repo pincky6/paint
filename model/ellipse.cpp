@@ -18,7 +18,6 @@ Ellipse::Ellipse(const QPointF &pointCenter, float width, float height)
         qreal y = height / 2.0 * sin(theta) + pointCenter.y();
         vertices.push_back(QPointF(x, y));
     }
-    this->pointCenter = pointCenter;
 }
 
 Ellipse::Ellipse(const Rectangle& rectangle):
