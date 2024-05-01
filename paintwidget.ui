@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>PaintWidget</class>
+ <widget class="QWidget" name="PaintWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="contextMenuPolicy">
+   <enum>Qt::DefaultContextMenu</enum>
+  </property>
+  <property name="windowTitle">
+   <string>PaintWidget</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="view::PaintToolBar" name="toolbar" native="true"/>
+   </item>
+   <item>
+    <widget class="view::PaintView" name="paintArea"/>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>view::PaintView</class>
+   <extends>QGraphicsView</extends>
+   <header location="global">view/paintview.h</header>
+  </customwidget>
+  <customwidget>
+   <class>view::PaintToolBar</class>
+   <extends>QWidget</extends>
+   <header>view/painttoolbar.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>PaintToolBar</class>
+ <widget class="QWidget" name="PaintToolBar">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>744</width>
+    <height>70</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>744</width>
+    <height>44</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout">
+   <item>
+    <widget class="QPushButton" name="rectangleButton">
+     <property name="text">
+      <string>Прямоугольник</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="triangleButton">
+     <property name="text">
+      <string>Треугольник</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="ellipsButton">
+     <property name="text">
+      <string>Эллипс</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="Line" name="line">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="pathButton">
+     <property name="text">
+      <string>Связь</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="Line" name="line_2">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="moveButton">
+     <property name="text">
+      <string>Переместить</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="deleteButton">
+     <property name="text">
+      <string>Удалить</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="Line" name="line_3">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="saveButton">
+     <property name="text">
+      <string>Сохранить</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="loadButton">
+     <property name="text">
+      <string>Загрузить</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>rectangleButton</sender>
+   <signal>clicked()</signal>
+   <receiver>PaintToolBar</receiver>
+   <slot>figureButton_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>57</x>
+     <y>21</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>371</x>
+     <y>21</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ellipsButton</sender>
+   <signal>clicked()</signal>
+   <receiver>PaintToolBar</receiver>
+   <slot>figureButton_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>236</x>
+     <y>21</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>371</x>
+     <y>21</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pathButton</sender>
+   <signal>clicked()</signal>
+   <receiver>PaintToolBar</receiver>
+   <slot>figureButton_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>331</x>
+     <y>21</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>371</x>
+     <y>21</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>triangleButton</sender>
+   <signal>clicked()</signal>
+   <receiver>PaintToolBar</receiver>
+   <slot>figureButton_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>150</x>
+     <y>21</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>371</x>
+     <y>21</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>figureButton_clicked()</slot>
+ </slots>
+</ui>
